@@ -419,10 +419,108 @@ img {
 }
 
 /*=============== JOIN ===============*/
+.join_container {
+    row-gap: 3rem;
+    padding-block-end: 2.5rem;
+}
+.join_data {
+    text-align: center;
+}
+.join_description {
+    margin-block-end: 2rem;
+}
+.join_form {
+    display: grid;
+    row-gap: 1rem;
+}
+.join_input {
+    padding: 1.25rem 1rem;
+    background-color: var(--container-color);
+}
+.join_button {
+    cursor: pointer;
+}
+.join_image{
+    position: relative;
+    justify-self: center;
+    overflow: hidden;
+}
+.join_img {
+    inline-size: 300px;
+    transition: transform .4s;
+}
+.join_shadow {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+.join_image:hover .join_img {
+    transform: scale(1.2);
+}
 
 
 /*=============== FOOTER ===============*/
-
+.footer {
+    padding-block: 2.5rem;
+    background-color: var(--container-color);
+}
+.footer_content {
+    row-gap: 3.5rem;
+}
+.footer_logo {
+    display: inline-block;
+    color: var(--title-color);
+    font-size: var(--h2-font-size);
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    margin-block-end: 1rem;
+}
+.footer_data {
+    grid-template-columns: repeat(2, max-content);
+    grid-area: 2.5rem 3.5rem;
+}
+.footer_title{
+    font-size: var(--h3-font-size);
+    margin-block-end: 1rem;
+}
+.footer_links {
+    display: grid;
+    row-gap: .75rem;
+}
+.footer_link {
+    color: var(--text-color);
+    text-transform: color .4s;
+}
+.footer_link:hover {
+    color: var(--title-color);
+}
+.footer_group,
+.footer_social {
+    display: flex;
+}
+.footer_group {
+    margin-block-start: 5rem;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2;
+}
+.footer_social-link {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    transition: color .4s, transform .4s;
+}
+.footer_social-link:hover {
+    color: var(--text-color);
+    transform: translateY(-.25rem);
+}
+.footer_copy {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    text-align: center;
+}
 
 /*=============== SCROLL BAR ===============*/
 
