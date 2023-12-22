@@ -198,8 +198,8 @@ img {
     background-color: hsla(0, 0%, 0%, .3);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px); /* safari */
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     z-index: -1;
 }
 
@@ -262,14 +262,14 @@ img {
     position: absolute;
     inline-size: 100%;
     block-size: 100%;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
 .home_card-title {
     position: absolute;
-    left: 1rem;
-    bottom: 1rem;
+    inset-inline-start: 1rem;
+    inset-block-end: 1rem;
     font-size: var(--h3-font-size);
     z-index: 1;
 }
@@ -307,7 +307,7 @@ img {
     text-align: center;
 }
 .about_description {
-    margin-bottom: 2rem;
+    margin-block-end: 2rem;
 }
 .about_image{
     position: relative;
@@ -320,8 +320,8 @@ img {
 }
 .about_shadow{
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     inline-size: 100%;
     block-size: 100%;
     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
@@ -332,7 +332,7 @@ img {
 
 /*=============== POPULAR ===============*/
 .popular_container {
-    padding-top: 1.5rem;
+    padding-block-start: 1.5rem;
     grid-template-columns: 240px;
     justify-content: center;
     row-gap: 2.5rem;
@@ -340,22 +340,22 @@ img {
 .popular_image {
     position: relative;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
 }
 .popular_img {
     transition: transform .4s;
 }
 .popular_shadow {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     inline-size: 100%;
     block-size: 100%;
     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
 }
 .popular_title {
     font-size: var(--h3-font-size);
-    margin-bottom: .5rem;
+    margin-block-end: .5rem;
 }
 .popular_location {
     display: inline-flex;
@@ -373,7 +373,50 @@ img {
 }
 
 /*=============== EXPLORE ===============*/
-
+.explore{ 
+    position: relative;
+}
+.explore_image {
+    position: absolute;
+    overflow: hidden;
+}
+.explore_img {
+    inline-size: 100%;
+    block-size: 333px;
+    object-fit: cover;
+    object-position: center;
+}
+.explore_shadow {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background: linear-gradient(180deg, hsl(0, 0%, 0%) 50%, 
+                                        hsla(0, 0%, 0%, 0) 40%,
+                                        hsla(0, 0%, 0%, 0) 60%,
+                                        hsla(0, 0%, 0%, 0) 92%);
+}
+.explore_content {
+    position: relative;
+    padding-block-start: 16rem;
+    text-align: center;
+    row-gap: 2.5rem;
+}
+.explore_user {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+}
+.explore_perfil {
+    inline-size: 30px;
+    border-radius: 50%;
+}
+.explore_name {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
 
 /*=============== JOIN ===============*/
 
